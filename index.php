@@ -8,7 +8,8 @@ header("Cache-Control: max-age=0", false);
 header("Pragma: no-cache");
 
 
-$domain_path_s = 'igrushki-detkam.ru';
+//$domain_path_s = 'igrushki-detkam.ru';
+$domain_path_s = 'id1122.com';
 
 if (substr($_SERVER['HTTP_HOST'],0,4) == 'www.')
 	define('DOMAIN_PATH','http://www.'.$domain_path_s);
@@ -25,18 +26,18 @@ defined('APPLICATION_PATH')
     
 // Define application environment
 defined('APPLICATION_ENV')
-    || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'production'));
-
+    || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'development'));
+/*
 set_include_path(implode(PATH_SEPARATOR, array(
     dirname(dirname(dirname(__FILE__))),
     get_include_path(),
 )));
-/*
+*/
 set_include_path(implode(PATH_SEPARATOR, array(
-    'D:\xampp\htdocs\z_test\distrib\ZendFramework-1.11.7\ZendFramework-1.11.7\library',
+    'C:\E_500\xampp\htdocs\zend\ZendFramework-1.10.8\library',
     get_include_path(),
 )));
-*/
+
 
 // Set unique id for user
 if (!isset($_COOKIE['user_uid'])) {

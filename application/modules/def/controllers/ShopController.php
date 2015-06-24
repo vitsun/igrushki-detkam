@@ -95,7 +95,7 @@ class ShopController extends Zend_Controller_Action
 			//$s = implode('',file('D:\\xampp\\htdocs\\is\\1\\helper_26.htm'));
 	
 			if ($RetStatus == 200) {
-				if (preg_match('/(<td><hr.*>.*В зависимости от выбранного.*зарезервированных на счете в My\-shop\.ru.*<\/td>)/Uis',$s,$r)) {
+				if (preg_match('/(<hr class="help"><\/div>\nВ зависимости от выбранного.*зарезервированных на счете в My\-shop\.ru.*<\/td>)/Uis',$s,$r)) {
 					//$r[1] = preg_replace($find,$repl,$r[1]);
 					$r[1] = $this->replace_url($r[1],$settings['s_val']);
 					$content = "<table><tr><td>".$r[1]."</td></tr></table>";
@@ -136,7 +136,7 @@ class ShopController extends Zend_Controller_Action
 			
 			$RetStatus = 200;
 			if ($RetStatus == 200) {
-				if (preg_match('/(<td><hr.*>.*Набор доступных способов доставки зависит.*<li><a href="\/my\/helper_71">Дополнительные курьерские службы<.*<\/td>)/Uis',$s,$r)) {
+				if (preg_match('/(<hr class="help"><\/div>\nНабор доступных способов доставки зависит.*<li><a href="\/my\/helper_71">Дополнительные курьерские службы<.*<\/td>)/Uis',$s,$r)) {
 					//$r[1] = preg_replace($find,$repl,$r[1]);
 					$r[1] = $this->replace_url($r[1],$settings['s_val']);
 					$content = "<table><tr><td>".$r[1]."</td></tr></table>";
