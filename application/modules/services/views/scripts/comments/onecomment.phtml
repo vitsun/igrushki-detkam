@@ -1,0 +1,8 @@
+<div class="comm_one">
+	<div class="comm_who">
+		<div class="comm_who_name"><?= htmlspecialchars(iconv('cp1251','utf-8',$this->comm['comm_name'])) ?></div>
+		<div class="comm_who_time"><?= date('d.m.Y H:i:s',$this->comm['comm_time']) ?></div>
+		<div class="clear"></div>
+	</div>
+	<div class="comm_text"><?= htmlspecialchars(iconv('cp1251','utf-8',$this->comm['comm_text'])) ?></div>
+</div>
